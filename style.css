@@ -1,0 +1,64 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "hd hd"
+    "sc as"
+    "ft ft";
+  grid-gap: 20px;
+}
+
+/*När width är 600px ändras kodens grid för mobilannpassning*/
+@media screen and (max-width: 600px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hd"
+      "sc"
+      "as"
+      "ft";
+    grid-gap: 10px;
+  }
+}
+
+p {
+  color: #42847D;
+}
+
+body {
+  background-color: #E9E9E9;
+}
+
+header {
+  background-color: #B9D2B3;
+  grid-area: hd;
+  text-align: center;
+}
+
+section {
+  background-color: #B4B4B4;
+  grid-area: sc;
+}
+
+aside {
+  background-color: #B8CEE6;
+  grid-area: as;
+  text-align: center;
+}
+
+footer {
+  background-color: grey;
+  grid-area: ft;
+}
+
+img#sea {
+  width: 80%;
+  /*Storleken i width kan inte bli mer än 1300px*/
+  max-width: 1300px;
+}
+
+img#html {
+  width: 55%;
+  /*Storleken i width kan inte bli mer än 400px*/
+  max-width: 400px;
+}
